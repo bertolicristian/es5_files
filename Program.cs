@@ -29,9 +29,12 @@ namespace es5_files
                     }
                 }
 
-                for (int i = 0;i < critical.Count; i++)
+                using (StreamWriter sw = new StreamWriter("alert.txt", true))
                 {
-                    Console.WriteLine(critical[i]);
+                    for (int i = 0; i < critical.Count; i++)
+                    {
+                        sw.WriteLine(critical[i]);
+                    }
                 }
             }
         }
